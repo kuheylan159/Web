@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoca Sokrat | Matematik Özel Ders ve Eğitim Koçluğu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-signature { font-family: 'Playfair Display', serif; }
+        .bg-poster-blue { background-color: #122175; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-900">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Exact SVG replica matching user uploaded logo -->
+                <div class="w-14 h-14 flex-shrink-0 bg-slate-900/80 p-1 rounded-xl border border-amber-500/30 shadow-inner flex items-center justify-center">
+                    <svg viewBox="0 0 400 450" class="w-full h-full drop-shadow-md">
+                        <!-- Floating Numbers Top Left -->
+                        <text x="140" y="55" fill="#eab308" font-weight="900" font-size="28" transform="rotate(-15 140 55)">1</text>
+                        <text x="165" y="62" fill="#2563eb" font-weight="900" font-size="32" transform="rotate(-10 165 62)">2</text>
+                        <text x="150" y="92" fill="#dc2626" font-weight="900" font-size="28" transform="rotate(-20 150 92)">7</text>
+                        <text x="180" y="98" fill="#f97316" font-weight="900" font-size="30" transform="rotate(-5 180 98)">5</text>
+                        <text x="175" y="128" fill="#16a34a" font-weight="900" font-size="28" transform="rotate(-12 175 128)">8</text>
+
+                        <!-- Numbers Inside Hair -->
+                        <text x="200" y="160" fill="#f59e0b" font-weight="900" font-size="44" transform="rotate(-10 200 160)">4</text>
+                        <text x="250" y="128" fill="#a855f7" font-weight="900" font-size="32">3</text>
+                        <text x="272" y="145" fill="#22c55e" font-weight="900" font-size="26">6</text>
+                        <text x="260" y="168" fill="#06b6d4" font-weight="900" font-size="24">9</text>
+
+                        <!-- Hair Outline / Silhouette -->
+                        <path d="M 220 100 Q 280 100 295 150 Q 305 180 280 205 Q 260 215 220 215 Q 180 210 170 180 Q 160 150 220 100 Z" fill="#09090b"/>
+
+                        <!-- Face Outline, Ears and Chin Detail -->
+                        <path d="M 175 190 C 145 190 145 235 170 235 M 290 190 C 320 190 320 235 295 235" fill="none" stroke="#09090b" stroke-width="12" stroke-linecap="round"/>
+                        <text x="158" y="222" fill="#09090b" font-weight="900" font-size="22">9</text>
+                        <text x="303" y="222" fill="#09090b" font-weight="900" font-size="22">9</text>
+                        
+                        <!-- Face Contour -->
+                        <path d="M 175 220 Q 232 300 290 220" fill="none" stroke="#09090b" stroke-width="8"/>
+
+                        <!-- Glasses: (-) and (+) -->
+                        <rect x="190" y="215" width="30" height="10" fill="#dc2626" rx="3"/>
+                        <rect x="245" y="215" width="30" height="10" fill="#eab308" rx="3"/>
+                        <rect x="255" y="205" width="10" height="30" fill="#eab308" rx="3"/>
+
+                        <!-- Mustache and Soul Patch -->
+                        <path d="M 170 255 Q 210 240 232 268 Q 255 240 295 255 Q 310 275 285 285 Q 245 260 232 285 Q 220 260 180 285 Q 155 275 170 255 Z" fill="#09090b"/>
+                        <rect x="227" y="293" width="10" height="14" fill="#09090b" rx="2"/>
+                        <rect x="222" y="310" width="20" height="4" fill="#09090b" rx="1"/>
+
+                        <!-- Suit Collar & Red Pi Bowtie -->
+                        <path d="M 185 305 L 232 360 L 280 305 Z" fill="#09090b"/>
+                        <text x="220" y="348" fill="#dc2626" font-weight="900" font-size="36">π</text>
+
+                        <!-- "hocaSokrat" Signature (hoca: Dark Blue/Black gradient, Sokrat: Red-Brown Gradient) -->
+                        <defs>
+                            <linearGradient id="hocaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#0f172a" />
+                                <stop offset="100%" stop-color="#1e3a8a" />
+                            </linearGradient>
+                            <linearGradient id="sokratGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#b91c1c" />
+                                <stop offset="100%" stop-color="#9a3412" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <text x="120" y="400" fill="url(#hocaGrad)" font-family="'Playfair Display', serif" font-style="italic" font-weight="bold" font-size="52">hoca</text>
+                        <text x="215" y="400" fill="url(#sokratGrad)" font-family="'Playfair Display', serif" font-style="italic" font-weight="bold" font-size="58">Sokrat</text>
+
+                        <!-- Swoosh Underline -->
+                        <path d="M 135 420 Q 240 460 350 395 Q 260 425 180 405" fill="url(#sokratGrad)"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white block">HOCA SOKRAT</span>
+                    <span class="text-xs font-bold text-amber-400">#hocasokratlazordeğil</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#afis" class="hover:text-amber-400 transition">Afişimiz</a>
+                <a href="#hizmetler" class="hover:text-amber-400 transition">Ayrıcalıklar</a>
+                <a href="https://wa.me/905073840884" target="_blank" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>+90 507 384 08 84</span>
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#afis" class="block text-slate-300 font-medium py-1">Afişimiz</a>
+            <a href="#hizmetler" class="block text-slate-300 font-medium py-1">Ayrıcalıklar</a>
+            <a href="https://wa.me/905073840884" target="_blank" class="block text-center bg-emerald-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp İletişim</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-red-950/80 border border-red-600/40 px-4 py-1.5 rounded-full text-red-400 text-xs font-bold uppercase tracking-wider shadow-sm">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <span>hocasokratlazordeğil</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+                        MATEMATİK <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-sky-400 to-red-500">Özel Ders ve Eğitim Koçluğu</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Tüm sınıf düzeyleri için sınavlara hazırlık. Matematiğe karşı tüm yargılarınızı değiştirmek için buradayız!
+                    </p>
+
+                    <!-- Feature badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl flex items-center space-x-3 shadow">
+                            <i class="fa-solid fa-chalkboard-user text-amber-400 text-lg"></i>
+                            <span class="text-sm font-semibold text-slate-200">Yüzyüze ve Online Dersler</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl flex items-center space-x-3 shadow">
+                            <i class="fa-solid fa-user-graduate text-sky-400 text-lg"></i>
+                            <span class="text-sm font-semibold text-slate-200">Birebir Eğitim Koçluğu</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl flex items-center space-x-3 shadow">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span class="text-sm font-semibold text-slate-200">Whatsapp Takip ve Desteği</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl flex items-center space-x-3 shadow">
+                            <i class="fa-solid fa-people-roof text-red-400 text-lg"></i>
+                            <span class="text-sm font-semibold text-slate-200">Aile Destekli Ödev Takibi</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/905073840884" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl transition text-center flex items-center justify-center space-x-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span class="text-base">+90 507 384 08 84</span>
+                        </a>
+                        <a href="#afis" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl shadow-sm transition text-center">
+                            Afişi İncele
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Poster Replica Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-red-600 via-amber-500 to-blue-700 rounded-3xl blur-xl opacity-40"></div>
+                        
+                        <div class="relative bg-poster-blue rounded-3xl overflow-hidden shadow-2xl border-4 border-red-600">
+                            <!-- Top Banner -->
+                            <div class="p-6 text-center border-b-2 border-red-600 relative bg-[#0d1650]">
+                                <div class="absolute top-3 right-3 bg-red-600 text-white font-black text-base px-2.5 py-0.5 rounded-lg shadow">
+                                    %+100
+                                </div>
+                                <h2 class="text-3xl font-black tracking-wider text-white mb-1">MATEMATİK</h2>
+                                <p class="text-sm font-bold text-slate-200 tracking-wide">ÖZEL DERS VE EĞİTİM KOÇLUĞU</p>
+                                <p class="text-[11px] font-semibold text-amber-400 tracking-wider mt-1.5 uppercase">TÜM SINIF DÜZEYLERİ İÇİN SINAVLARA HAZIRLIK</p>
+                            </div>
+
+                            <!-- Bullet Points -->
+                            <div class="p-6 space-y-3.5 text-slate-100 font-bold text-sm bg-poster-blue">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-amber-400 text-xl">•</span>
+                                    <span>YÜZYÜZE VE ONLİNE DERSLER</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-amber-400 text-xl">•</span>
+                                    <span>BİREBİR EĞİTİM KOÇLUĞU</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-amber-400 text-xl">•</span>
+                                    <span>WHATSAPP TAKİP VE DESTEĞİ</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-amber-400 text-xl">•</span>
+                                    <span>AİLE DESTEKLİ ÖDEV TAKİBİ</span>
+                                </div>
+                            </div>
+
+                            <!-- Logo & Footer inside Poster -->
+                            <div class="p-4 bg-[#0a1140] border-t-2 border-red-600 flex flex-col items-center justify-center text-center">
+                                <div class="w-32 h-32 mb-1 flex items-center justify-center">
+                                    <svg viewBox="0 0 400 450" class="w-full h-full drop-shadow-lg">
+                                        <!-- Floating Numbers Top Left -->
+                                        <text x="140" y="55" fill="#eab308" font-weight="900" font-size="28" transform="rotate(-15 140 55)">1</text>
+                                        <text x="165" y="62" fill="#2563eb" font-weight="900" font-size="32" transform="rotate(-10 165 62)">2</text>
+                                        <text x="150" y="92" fill="#dc2626" font-weight="900" font-size="28" transform="rotate(-20 150 92)">7</text>
+                                        <text x="180" y="98" fill="#f97316" font-weight="900" font-size="30" transform="rotate(-5 180 98)">5</text>
+                                        <text x="175" y="128" fill="#16a34a" font-weight="900" font-size="28" transform="rotate(-12 175 128)">8</text>
+
+                                        <!-- Numbers Inside Hair -->
+                                        <text x="200" y="160" fill="#f59e0b" font-weight="900" font-size="44" transform="rotate(-10 200 160)">4</text>
+                                        <text x="250" y="128" fill="#a855f7" font-weight="900" font-size="32">3</text>
+                                        <text x="272" y="145" fill="#22c55e" font-weight="900" font-size="26">6</text>
+                                        <text x="260" y="168" fill="#06b6d4" font-weight="900" font-size="24">9</text>
+
+                                        <!-- Hair Outline / Silhouette -->
+                                        <path d="M 220 100 Q 280 100 295 150 Q 305 180 280 205 Q 260 215 220 215 Q 180 210 170 180 Q 160 150 220 100 Z" fill="#ffffff"/>
+
+                                        <!-- Face Outline & Ears -->
+                                        <path d="M 175 190 C 145 190 145 235 170 235 M 290 190 C 320 190 320 235 295 235" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+                                        <text x="158" y="222" fill="#ffffff" font-weight="900" font-size="22">9</text>
+                                        <text x="303" y="222" fill="#ffffff" font-weight="900" font-size="22">9</text>
+                                        <path d="M 175 220 Q 232 300 290 220" fill="none" stroke="#ffffff" stroke-width="8"/>
+
+                                        <!-- Glasses: (-) and (+) -->
+                                        <rect x="190" y="215" width="30" height="10" fill="#dc2626" rx="3"/>
+                                        <rect x="245" y="215" width="30" height="10" fill="#eab308" rx="3"/>
+                                        <rect x="255" y="205" width="10" height="30" fill="#eab308" rx="3"/>
+
+                                        <!-- Mustache -->
+                                        <path d="M 170 255 Q 210 240 232 268 Q 255 240 295 255 Q 310 275 285 285 Q 245 260 232 285 Q 220 260 180 285 Q 155 275 170 255 Z" fill="#ffffff"/>
+                                        <rect x="227" y="293" width="10" height="14" fill="#ffffff" rx="2"/>
+                                        <rect x="222" y="310" width="20" height="4" fill="#ffffff" rx="1"/>
+
+                                        <!-- Bowtie -->
+                                        <path d="M 185 305 L 232 360 L 280 305 Z" fill="#ffffff"/>
+                                        <text x="220" y="348" fill="#dc2626" font-weight="900" font-size="36">π</text>
+
+                                        <!-- hocaSokrat Text -->
+                                        <text x="120" y="400" fill="#38bdf8" font-family="'Playfair Display', serif" font-style="italic" font-weight="bold" font-size="52">hoca</text>
+                                        <text x="215" y="400" fill="#f97316" font-family="'Playfair Display', serif" font-style="italic" font-weight="bold" font-size="58">Sokrat</text>
+                                        <path d="M 135 420 Q 240 460 350 395 Q 260 425 180 405" fill="#f97316"/>
+                                    </svg>
+                                </div>
+                                <p class="text-[11px] font-bold text-slate-300">MATEMATİĞE KARŞI TÜM YARGINIZI</p>
+                                <p class="text-xs font-black text-amber-400 mb-3">DEĞİŞTİRMEK İÇİN BURADAYIZ</p>
+                                <div class="flex items-center justify-between w-full px-2 pt-2 border-t border-slate-800">
+                                    <span class="text-white font-bold text-xs flex items-center space-x-1">
+                                        <i class="fa-solid fa-phone text-emerald-400"></i>
+                                        <span>+90 507 384 08 84</span>
+                                    </span>
+                                    <span class="text-pink-400 text-xs font-bold flex items-center space-x-1">
+                                        <i class="fa-brands fa-instagram"></i>
+                                        <span>hocasokrat</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="hizmetler" class="py-20 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-3">PROFESYONEL SİSTEM</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Neden Hoca Sokrat?
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                    <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Yüzyüze & Online</h4>
+                    <p class="text-slate-400 text-sm">
+                        İster birebir ev ortamında ister dijital platformlar üzerinden kesintisiz, odaklanılmış ders saatleri.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                    <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Birebir Koçluk</h4>
+                    <p class="text-slate-400 text-sm">
+                        Öğrencinin eksiklerine özel hazırlanan deneme analizleri ve sınav takip programları.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">WhatsApp Destek</h4>
+                    <p class="text-slate-400 text-sm">
+                        Ders dışında takıldığınız, çözümünü bulamadığınız soruları anında gönderip çözüm alabildiğiniz hat.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                    <div class="w-12 h-12 bg-red-500/20 text-red-400 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Aile Destekli Takip</h4>
+                    <p class="text-slate-400 text-sm">
+                        Düzenli veli bilgilendirmeleri ve ev ödevlerinin eksiksiz tamamlanması için aile ile koordineli süreç.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="afis" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-3">RESMİ TANITIM</h2>
+                <h3 class="text-3xl font-extrabold text-white">Hoca Sokrat Afiş Tasarımı</h3>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-poster-blue rounded-3xl overflow-hidden shadow-2xl border-4 border-red-600">
+                <div class="p-8 md:p-12 text-center border-b-2 border-red-600 relative bg-[#0d1650]">
+                    <div class="absolute top-6 right-6 bg-red-600 text-white font-black text-2xl px-4 py-1 rounded-xl shadow">
+                        %+100
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl font-black tracking-wider text-white mb-3">MATEMATİK</h2>
+                    <p class="text-xl font-bold text-slate-200 tracking-wide">ÖZEL DERS VE EĞİTİM KOÇLUĞU</p>
+                    <p class="text-sm font-semibold text-amber-400 tracking-wider mt-3 uppercase">TÜM SINIF DÜZEYLERİ İÇİN SINAVLARA HAZIRLIK</p>
+                </div>
+
+                <div class="p-8 md:p-12 space-y-6 text-slate-100 font-bold text-lg md:text-xl bg-poster-blue">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-amber-400 text-3xl">•</span>
+                        <span>YÜZYÜZE VE ONLİNE DERSLER</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-amber-400 text-3xl">•</span>
+                        <span>BİREBİR EĞİTİM KOÇLUĞU</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-amber-400 text-3xl">•</span>
+                        <span>WHATSAPP TAKİP VE DESTEĞİ</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-amber-400 text-3xl">•</span>
+                        <span>AİLE DESTEKLİ ÖDEV TAKİBİ</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-[#0a1140] border-t-2 border-red-600 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-sm font-bold text-slate-300">MATEMATİĞE KARŞI TÜM YARGINIZI</p>
+                        <p class="text-lg font-black text-amber-400">DEĞİŞTİRMEK İÇİN BURADAYIZ</p>
+                    </div>
+                    <a href="https://wa.me/905073840884" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-8 py-4 rounded-xl flex items-center space-x-3 text-lg shadow-xl transition">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>+90 507 384 08 84</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900/30 border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white mb-4">Hemen İletişime Geçin</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8">
+                Detaylı bilgi, kontenjan durumları ve ilk tanışma dersi planlaması için doğrudan WhatsApp üzerinden ulaşabilirsiniz.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/905073840884" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition flex items-center justify-center space-x-3 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>WhatsApp Mesaj Gönder</span>
+                </a>
+                <a href="tel:+905073840884" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition flex items-center justify-center space-x-3 text-lg">
+                    <i class="fa-solid fa-phone text-xl"></i>
+                    <span>Hemen Ara: 0507 384 08 84</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-slate-500 text-sm text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <p class="text-slate-300 font-bold">#hocasokratlazordeğil</p>
+            <p>© Hoca Sokrat | Matematik Özel Ders & Eğitim Koçluğu. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
